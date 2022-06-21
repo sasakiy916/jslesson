@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jsレッスン</title>
+</head>
+<body>
+    <script>
+        window.onload = () => {
+            const ageDom = document.getElementById("itAge");
+            const resultDom = document.getElementById("result");
+            const btnDom = document.getElementById("btn");
+            btnDom.addEventListener("click", () => {
+                let age = ageDom.value;
+                age = parseInt(age);
+                let str;
+                if (age >= 20) {
+                    str = "おとな";
+                } else {
+                    str = "こども";
+                }
+                resultDom.textContent = str;
+            });
+            // const btCheck=()=>{
+            //     let age = ageDom.value;
+            //     age = parseInt(age);
+            //     let str;
+            //     if(age >= 20){
+            //         str = "おとな";
+            //     }else{
+            //         str = "こども";
+            //     }
+            //     resultDom.textContent = str;
+            // };
+        };
+    </script>
+    <input type="text" id="itAge" value="" placeholder="Enter your age">
+    <button id="btn">Check</button>
+    <div id="result"></div>
+    <script>
+    </script>
+</body>
+
+</html>
