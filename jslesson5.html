@@ -35,9 +35,12 @@
             const calc = document.getElementById("calc");
             calc.addEventListener("click",()=>{
                 let sum = 0;
-                for(let i=0;i<nums.length;i++){
-                    sum += nums[i];
+                for(let n of nums){
+                    sum += n;
                 }
+                // for(let i=0;i<nums.length;i++){
+                //     sum += nums[i];
+                // }
                 let msg = `要素の平均は${sum/nums.length}です`;
                 result.textContent = msg;
             });
